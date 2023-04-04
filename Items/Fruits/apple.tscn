@@ -1,0 +1,153 @@
+[gd_scene load_steps=23 format=3 uid="uid://tjdl4byfraeo"]
+
+[ext_resource type="Script" path="res://Items/Fruits/food.gd" id="1_wrl6b"]
+[ext_resource type="Texture2D" uid="uid://6kjdfypwoi86" path="res://Items/Fruits/Apple.png" id="2_gcnij"]
+[ext_resource type="PackedScene" uid="uid://cia2c28vxxw2d" path="res://Items/Fruits/food_hurt.tscn" id="3_eqg10"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgoq4"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t0y4"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glfk5"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0ovx"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j25a"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idmt6"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oosqt"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mbe0"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mubiy"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6vtq"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmtvx"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwf0k"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_njjl5"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6nul"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr40h"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epcxy"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4kpr"]
+atlas = ExtResource("2_gcnij")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2fd4t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgoq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t0y4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glfk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0ovx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4j25a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idmt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oosqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mbe0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mubiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6vtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmtvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwf0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_njjl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6nul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr40h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epcxy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4kpr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 17.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1l52c"]
+radius = 6.0
+
+[node name="Apple" type="Node2D"]
+position = Vector2(98, 94)
+script = ExtResource("1_wrl6b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2fd4t")
+autoplay = "default"
+frame_progress = 0.329673
+
+[node name="FoodHurt" parent="." instance=ExtResource("3_eqg10")]
+
+[node name="CollisionShape2D" parent="FoodHurt" index="0"]
+shape = SubResource("CircleShape2D_1l52c")
+
+[connection signal="area_entered" from="FoodHurt" to="." method="_on_food_hurt_area_entered"]
+
+[editable path="FoodHurt"]
