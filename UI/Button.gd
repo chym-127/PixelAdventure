@@ -22,7 +22,7 @@ func unactive():
 func exec():
 	match event:
 		EVENT.PLAY:
-			pass
+			SceneContext.load_level_scene(1)
 		EVENT.LEVELS:
 			pass
 		EVENT.HELP:

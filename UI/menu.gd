@@ -15,18 +15,21 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var new_index = current_index
-	if Input.is_action_just_pressed("ui_down"):
-		if new_index < total-1:
-			new_index += 1
-		else:
-			new_index = 0
-	if Input.is_action_just_pressed("ui_up"):
-		if new_index > 0:
-			new_index -= 1
-		else:
-			new_index = total-1
-	if current_index != new_index:
-		buttons[current_index].unactive()
-		current_index = new_index
-		buttons[current_index].active()
+	if Input.is_action_just_pressed("ui_accept"):
+		buttons[current_index].exec()
+	else:
+		var new_index = current_index
+		if Input.is_action_just_pressed("ui_down"):
+			if new_index < total-1:
+				new_index += 1
+			else:
+				new_index = 0
+		if Input.is_action_just_pressed("ui_up"):
+			if new_index > 0:
+				new_index -= 1
+			else:
+				new_index = total-1
+		if current_index != new_index:
+			buttons[current_index].unactive()
+			current_index = new_index
+			buttons[current_index].active()

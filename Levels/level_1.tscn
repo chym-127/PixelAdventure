@@ -1,18 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://ddiydn5ump5ns"]
+[gd_scene load_steps=7 format=3 uid="uid://ddiydn5ump5ns"]
 
 [ext_resource type="TileSet" uid="uid://m1beimht6xdk" path="res://Terrain/tileset.tres" id="1_0bssy"]
 [ext_resource type="PackedScene" uid="uid://dvpgcwkq57gy5" path="res://Background/dynamic_bg.tscn" id="1_0w7qa"]
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_52qhr"]
 [ext_resource type="PackedScene" uid="uid://tjdl4byfraeo" path="res://Items/Fruits/apple.tscn" id="3_6ukf6"]
 [ext_resource type="PackedScene" uid="uid://bgcm8w6swwc2o" path="res://Traps/traps.tscn" id="3_7m261"]
-[ext_resource type="PackedScene" uid="uid://brydws1403fo5" path="res://Items/Fruits/banana.tscn" id="4_vihpj"]
 [ext_resource type="PackedScene" uid="uid://7cnea6eco0yx" path="res://Player/player.tscn" id="4_w7kdl"]
-[ext_resource type="PackedScene" uid="uid://cs3y8525q44sa" path="res://Items/Fruits/cherry.tscn" id="6_w7ly6"]
-[ext_resource type="PackedScene" uid="uid://v4sws663gbg4" path="res://Items/Fruits/kiwi.tscn" id="7_w5pkp"]
-[ext_resource type="PackedScene" uid="uid://b2lei0drwugm5" path="res://Items/Fruits/melon.tscn" id="8_soa3o"]
-[ext_resource type="PackedScene" uid="uid://40vpv7eih0ix" path="res://Items/Fruits/orange.tscn" id="9_3da56"]
-[ext_resource type="PackedScene" uid="uid://dbddk3ppb1xpi" path="res://Items/Fruits/pineapple.tscn" id="10_iokr3"]
-[ext_resource type="PackedScene" uid="uid://jkhwkk17h146" path="res://Items/Fruits/strawberry.tscn" id="11_mmh0s"]
 
 [node name="Level_1" type="Node2D"]
 script = ExtResource("1_52qhr")
@@ -26,25 +19,38 @@ layer_0/tile_data = PackedInt32Array(0, 131072, 2, 65536, 131072, 1, 131072, 131
 
 [node name="Foods" type="Node2D" parent="."]
 
-[node name="Banana" parent="Foods" instance=ExtResource("4_vihpj")]
-position = Vector2(252, 291)
-
 [node name="Apple" parent="Foods" instance=ExtResource("3_6ukf6")]
-position = Vector2(219, 304)
+position = Vector2(248, 292)
 
-[node name="Cherry" parent="Foods" instance=ExtResource("6_w7ly6")]
+[node name="Apple2" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(278, 292)
 
-[node name="Kiwi" parent="Foods" instance=ExtResource("7_w5pkp")]
+[node name="Apple3" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(264, 264)
 
-[node name="Melon" parent="Foods" instance=ExtResource("8_soa3o")]
+[node name="Apple4" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(312, 304)
 
-[node name="Orange" parent="Foods" instance=ExtResource("9_3da56")]
-position = Vector2(239, 271)
+[node name="Apple5" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(352, 292)
 
-[node name="Pineapple" parent="Foods" instance=ExtResource("10_iokr3")]
-position = Vector2(273, 270)
+[node name="Apple6" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(352, 264)
 
-[node name="Strawberry" parent="Foods" instance=ExtResource("11_mmh0s")]
+[node name="Apple7" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(448, 264)
+
+[node name="Apple8" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(216, 304)
+
+[node name="Apple9" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(496, 264)
+
+[node name="Apple10" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(384, 304)
+
+[node name="Apple11" parent="Foods" instance=ExtResource("3_6ukf6")]
+position = Vector2(416, 304)
 
 [node name="Player" parent="." instance=ExtResource("4_w7kdl")]
 position = Vector2(40, 272)
