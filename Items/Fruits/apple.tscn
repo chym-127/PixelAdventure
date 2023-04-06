@@ -131,7 +131,7 @@ animations = [{
 "speed": 17.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1l52c"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_13ud1"]
 radius = 6.0
 
 [node name="Apple" type="Node2D"]
@@ -146,7 +146,7 @@ frame_progress = 0.329673
 [node name="FoodHurt" parent="." instance=ExtResource("3_eqg10")]
 
 [node name="CollisionShape2D" parent="FoodHurt" index="0"]
-shape = SubResource("CircleShape2D_1l52c")
+shape = SubResource("CircleShape2D_13ud1")
 
 [connection signal="area_entered" from="FoodHurt" to="." method="_on_food_hurt_area_entered"]
 

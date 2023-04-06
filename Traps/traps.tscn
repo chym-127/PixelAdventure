@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgcm8w6swwc2o"]
+
+[ext_resource type="Texture2D" uid="uid://bbgybkni0xrhp" path="res://Traps/Spikes/Idle.png" id="1_ped24"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjwut"]
+texture = ExtResource("1_ped24")
+0:0/next_alternative_id = 4
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -4.5, 1, -0.5, 8, 3.5, 1, 7, 8)
+0:0/1 = 1
+0:0/1/flip_v = true
+0:0/1/transpose = true
+0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/1/physics_layer_0/angular_velocity = 0.0
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 1, 4.5, 8, 0.5, 1, -3.5, 8, -8)
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/2/physics_layer_0/angular_velocity = 0.0
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5, -1, -0.5, -8, 3.5, -1, 8, -8, -8, -8)
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/transpose = true
+0:0/3/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/3/physics_layer_0/angular_velocity = 0.0
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -1.5, 3.5, -8, -0.5, -1, -4.5, -8, -8)
+
+[sub_resource type="TileSet" id="TileSet_yilwf"]
+physics_layer_0/collision_layer = 16
+physics_layer_0/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_vjwut")
+
+[node name="Traps" type="TileMap"]
+tile_set = SubResource("TileSet_yilwf")
+format = 2
+layer_0/tile_data = PackedInt32Array(1114126, 0, 0, 1114127, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0)

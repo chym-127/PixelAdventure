@@ -1,0 +1,153 @@
+[gd_scene load_steps=23 format=3 uid="uid://jkhwkk17h146"]
+
+[ext_resource type="Script" path="res://Items/Fruits/food.gd" id="1_refki"]
+[ext_resource type="Texture2D" uid="uid://b52fin4of78kr" path="res://Items/Fruits/Strawberry.png" id="2_h8vhh"]
+[ext_resource type="PackedScene" uid="uid://cia2c28vxxw2d" path="res://Items/Fruits/food_hurt.tscn" id="3_d775n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g44o8"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sard"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jm7o8"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ynt3"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_548mr"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68y8g"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yq7w"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mktqi"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebfwa"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkl70"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrn7e"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xon8g"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7ue2"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48buv"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nml31"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wful1"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2toay"]
+atlas = ExtResource("2_h8vhh")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0h5i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g44o8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sard")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jm7o8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ynt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_548mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68y8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yq7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mktqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebfwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkl70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrn7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xon8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7ue2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48buv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nml31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wful1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2toay")
+}],
+"loop": true,
+"name": &"default",
+"speed": 17.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wb12f"]
+radius = 6.0
+height = 14.0
+
+[node name="Strawberry" type="Node2D"]
+position = Vector2(239, 304)
+script = ExtResource("1_refki")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u0h5i")
+autoplay = "default"
+
+[node name="FoodHurt" parent="." instance=ExtResource("3_d775n")]
+
+[node name="CollisionShape2D" parent="FoodHurt" index="0"]
+shape = SubResource("CapsuleShape2D_wb12f")
+
+[connection signal="area_entered" from="FoodHurt" to="." method="_on_food_hurt_area_entered" flags=18]
+
+[editable path="FoodHurt"]
