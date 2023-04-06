@@ -1,23 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://fqa6hphss31m"]
+[gd_scene load_steps=13 format=3 uid="uid://fqa6hphss31m"]
 
-[ext_resource type="Texture2D" uid="uid://ujtni874crjc" path="res://Background/Blue.png" id="1_5v04t"]
 [ext_resource type="Script" path="res://Levels/level.gd" id="1_jnm8r"]
-[ext_resource type="Shader" path="res://Background/bg-scroll.gdshader" id="1_nceiw"]
 [ext_resource type="TileSet" uid="uid://m1beimht6xdk" path="res://Terrain/tileset.tres" id="1_tjwks"]
+[ext_resource type="PackedScene" uid="uid://dvpgcwkq57gy5" path="res://Background/dynamic_bg.tscn" id="2_c3uc5"]
 [ext_resource type="PackedScene" uid="uid://7cnea6eco0yx" path="res://Player/player.tscn" id="3_j7rji"]
+[ext_resource type="PackedScene" uid="uid://cm6lkvoc8ysye" path="res://Traps/spiked_ball.tscn" id="4_t74xp"]
 [ext_resource type="PackedScene" uid="uid://tjdl4byfraeo" path="res://Items/Fruits/apple.tscn" id="5_wmsyc"]
 [ext_resource type="Texture2D" uid="uid://bbgybkni0xrhp" path="res://Traps/Spikes/Idle.png" id="7_2ky6b"]
-[ext_resource type="Script" path="res://Traps/Spiked Ball/SpikedBall.gd" id="8_es4qr"]
-[ext_resource type="Texture2D" uid="uid://cvgcga1nmv7tv" path="res://Traps/Spiked Ball/Chain.png" id="8_tn6vm"]
-[ext_resource type="Texture2D" uid="uid://bty0uu2li6h5e" path="res://Traps/Spiked Ball/Spiked Ball.png" id="9_qteem"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yog5c"]
-shader = ExtResource("1_nceiw")
-shader_parameter/speed_x = 0.0
-shader_parameter/speed_y = -0.5
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_hjgbn"]
-radius = 13.0384
+[ext_resource type="PackedScene" uid="uid://dj6eswfju0bog" path="res://Traps/trampoline.tscn" id="9_vqsd7"]
+[ext_resource type="PackedScene" uid="uid://4fucxlnqw1xr" path="res://Traps/falling_platforms.tscn" id="11_5uarq"]
+[ext_resource type="PackedScene" uid="uid://l37g8iu4uxoo" path="res://Traps/arrow.tscn" id="12_l5o0t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vjwut"]
 texture = ExtResource("7_2ky6b")
@@ -52,40 +44,14 @@ sources/0 = SubResource("TileSetAtlasSource_vjwut")
 [node name="World" type="Node2D"]
 script = ExtResource("1_jnm8r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture_repeat = 2
-material = SubResource("ShaderMaterial_yog5c")
-position = Vector2(321, 177)
-texture = ExtResource("1_5v04t")
-region_enabled = true
-region_rect = Rect2(0, 0, 640, 360)
+[node name="DynamicBg" parent="." instance=ExtResource("2_c3uc5")]
+IS_RANDOM = true
 
-[node name="SpikedBall" type="Node2D" parent="."]
+[node name="SpikedBall" parent="." instance=ExtResource("4_t74xp")]
 position = Vector2(488, 152)
-script = ExtResource("8_es4qr")
-
-[node name="Marker2D" type="Marker2D" parent="SpikedBall"]
-
-[node name="Chain" type="Sprite2D" parent="SpikedBall/Marker2D"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(0, -36)
-texture = ExtResource("8_tn6vm")
-region_enabled = true
-region_rect = Rect2(0, 0, 9, 80)
-
-[node name="Ball" type="Sprite2D" parent="SpikedBall/Marker2D"]
-position = Vector2(0, -85)
-texture = ExtResource("9_qteem")
-
-[node name="Area2D" type="Area2D" parent="SpikedBall/Marker2D"]
-position = Vector2(0, -85)
-collision_layer = 16
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikedBall/Marker2D/Area2D"]
-shape = SubResource("CircleShape2D_hjgbn")
+speed = 1
+ROUND = true
+Length = 96
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_tjwks")
@@ -98,25 +64,25 @@ position = Vector2(104, 240)
 [node name="Foods" type="Node2D" parent="."]
 
 [node name="Apple" parent="Foods" instance=ExtResource("5_wmsyc")]
-position = Vector2(178, 271)
+position = Vector2(178, 264)
 
 [node name="Apple2" parent="Foods" instance=ExtResource("5_wmsyc")]
-position = Vector2(194, 271)
+position = Vector2(194, 264)
 
 [node name="Apple3" parent="Foods" instance=ExtResource("5_wmsyc")]
-position = Vector2(210, 271)
+position = Vector2(210, 264)
 
 [node name="Apple4" parent="Foods" instance=ExtResource("5_wmsyc")]
 position = Vector2(240, 240)
 
 [node name="Apple5" parent="Foods" instance=ExtResource("5_wmsyc")]
-position = Vector2(448, 271)
+position = Vector2(428, 255)
 
 [node name="Apple8" parent="Foods" instance=ExtResource("5_wmsyc")]
-position = Vector2(296, 264)
+position = Vector2(296, 259)
 
 [node name="Apple9" parent="Foods" instance=ExtResource("5_wmsyc")]
-position = Vector2(328, 264)
+position = Vector2(328, 259)
 
 [node name="Apple10" parent="Foods" instance=ExtResource("5_wmsyc")]
 position = Vector2(408, 240)
@@ -125,7 +91,7 @@ position = Vector2(408, 240)
 position = Vector2(312, 240)
 
 [node name="Apple12" parent="Foods" instance=ExtResource("5_wmsyc")]
-position = Vector2(408, 264)
+position = Vector2(392, 256)
 
 [node name="Apple13" parent="Foods" instance=ExtResource("5_wmsyc")]
 position = Vector2(512, 240)
@@ -137,3 +103,15 @@ position = Vector2(480, 240)
 tile_set = SubResource("TileSet_yilwf")
 format = 2
 layer_0/tile_data = PackedInt32Array(1114126, 0, 0, 1114127, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0)
+
+[node name="Trampoline" parent="." instance=ExtResource("9_vqsd7")]
+position = Vector2(144, 243)
+
+[node name="FallingPlatforms" parent="." instance=ExtResource("11_5uarq")]
+position = Vector2(200, 208)
+
+[node name="Arrow" parent="." instance=ExtResource("12_l5o0t")]
+position = Vector2(112, 184)
+
+[node name="Arrow2" parent="." instance=ExtResource("12_l5o0t")]
+position = Vector2(112, 136)

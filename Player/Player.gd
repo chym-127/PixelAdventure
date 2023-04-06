@@ -38,7 +38,7 @@ func _physics_process(delta):
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			state = WALLJUMP
 			if Input.is_action_just_pressed("ui_accept") and state != DOUBLE_JUMP:
-				velocity.y = JUMP_VELOCITY 
+				velocity.y += JUMP_VELOCITY 
 		else:
 			if state != DOUBLE_JUMP and state != JUMP:
 				state = FALL
@@ -56,11 +56,11 @@ func _physics_process(delta):
 			can_jump = false
 			can_double_jump = false
 			state = DOUBLE_JUMP
-			velocity.y = JUMP_VELOCITY * 0.85
+			jump(JUMP_VELOCITY * 0.85)
 		else:
 			can_double_jump = true
 			state = JUMP
-			velocity.y = JUMP_VELOCITY 
+			jump(JUMP_VELOCITY)
 		
 	if not is_on_floor() and state != WALLJUMP:
 		if state != DOUBLE_JUMP:
@@ -94,7 +94,8 @@ func _physics_process(delta):
 		if state == WALLJUMP:
 			state = FALL
 		
-		
+func jump(val):
+	velocity.y = val
 	
 func move(direction,scale=1):
 	if direction:
@@ -156,3 +157,15 @@ func _on_player_hurt_box_body_entered(body):
 
 func _on_player_hurt_box_area_entered(area):
 	death()
+
+func booster(run_speed,jump_speed):
+	if run_speed:
+		velocity.x = run_speed
+	if jump_speed:
+		velocity.y = jump_speed
+
+
+func _on_foot_area_entered(area):
+	if "is_booster" in area:
+		booster(area.run_speed,area.jump_speed)
+	

@@ -37,6 +37,8 @@ window/stretch/mode="canvas_items"
 2d_physics/layer_6="EnemyHurt"
 2d_physics/layer_7="Food"
 2d_physics/layer_8="FoodHurt"
+2d_physics/layer_9="BoosterHurt"
+2d_physics/layer_10="PlayerFoot"
 
 [rendering]
 
