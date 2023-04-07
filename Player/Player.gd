@@ -18,6 +18,7 @@ func _ready():
 	audio.stream = jump_audio
 
 enum {
+	STOP,
 	IDLE,
 	RUN,
 	JUMP,
@@ -26,19 +27,19 @@ enum {
 	WALLJUMP
 }
 
-var state = IDLE
+var state = STOP
 var can_double_jump = false
 var can_jump = true
 
 func _physics_process(delta):
+	if state == STOP:
+		return
 #	首先判断是否是WallJump 状态
 	var flag = is_on_wall_only()
 	if flag:
 		if get_wall_normal().x == -Input.get_axis("ui_left", "ui_right"):
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			state = WALLJUMP
-			if Input.is_action_just_pressed("ui_accept") and state != DOUBLE_JUMP:
-				velocity.y += JUMP_VELOCITY 
 		else:
 			if state != DOUBLE_JUMP and state != JUMP:
 				state = FALL
@@ -125,7 +126,10 @@ func wall_jump_state(direction):
 	move(direction,0.5)
 	can_jump = true
 	can_double_jump = false
-	velocity.y = 15
+	if Input.is_action_pressed("ui_accept"):
+		velocity.y = -15 * 2
+	else:
+		velocity.y = 15
 
 func change_facing(x):
 	if x > 0:
@@ -163,9 +167,12 @@ func booster(run_speed,jump_speed):
 		velocity.x = run_speed
 	if jump_speed:
 		velocity.y = jump_speed
-
+	can_jump=true
 
 func _on_foot_area_entered(area):
 	if "is_booster" in area:
 		booster(area.run_speed,area.jump_speed)
 	
+func _on_animated_sprite_2d_animation_finished():
+	sprite.visible = true
+	state = IDLE

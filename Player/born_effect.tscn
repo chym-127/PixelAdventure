@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://ft6mn52nf552"]
+
+[ext_resource type="Script" path="res://Player/BornEffect.gd" id="1_gyjgp"]
+[ext_resource type="Texture2D" uid="uid://bql1kexcjon03" path="res://Player/Appearing (96x96).png" id="2_xf2uj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cheqm"]
+atlas = ExtResource("2_xf2uj")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqsad"]
+atlas = ExtResource("2_xf2uj")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh5q6"]
+atlas = ExtResource("2_xf2uj")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adofy"]
+atlas = ExtResource("2_xf2uj")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqfrp"]
+atlas = ExtResource("2_xf2uj")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82osp"]
+atlas = ExtResource("2_xf2uj")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd222"]
+atlas = ExtResource("2_xf2uj")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_35fis"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cheqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqsad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh5q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adofy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqfrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82osp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wd222")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="BornEffect" type="Node2D"]
+script = ExtResource("1_gyjgp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_35fis")
+frame_progress = 0.521106
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

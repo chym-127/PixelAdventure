@@ -35,4 +35,3 @@ sources/0 = SubResource("TileSetAtlasSource_vjwut")
 [node name="Traps" type="TileMap"]
 tile_set = SubResource("TileSet_yilwf")
 format = 2
-layer_0/tile_data = PackedInt32Array(1114126, 0, 0, 1114127, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0)

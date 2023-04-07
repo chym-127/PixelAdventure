@@ -13,7 +13,7 @@ enum MODE {
 
 @export_range(0,360,1) var start_angle = 0
 @export_range(1,360,1) var end_angle = 360
-@export_range(1,3,1) var speed = 3
+@export_range(1,3,1) var speed = 1
 @export var ROUND  = false
 @export_range(24,120,8) var Length  = 64
 
@@ -21,7 +21,8 @@ var current_direction = 1
 var current_angle = start_angle
 
 func _ready():
-	chain.region_rect = Rect2(0,-(Length/2),9,Length)
+	chain.region_rect = Rect2(0,0,9,Length)
+	chain.position = Vector2(0,-(Length/2))
 	ball.position = Vector2(0,-(Length+5))
 	marker2D.rotation_degrees = start_angle
 	if not ROUND:
