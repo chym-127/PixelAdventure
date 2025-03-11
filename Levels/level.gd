@@ -6,6 +6,12 @@ extends Node2D
 var food_total = 0
 var level_string = "res://Levels/level_%s.tscn"
 
+
+func _input(event):
+	var key_code = event.as_text()
+	if key_code == "Escape" && event.pressed:
+		SceneContext.load_menu_scene()
+
 func _ready():
 	if foods:
 		food_total = foods.get_child_count()

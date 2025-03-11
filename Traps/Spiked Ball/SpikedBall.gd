@@ -13,7 +13,7 @@ enum MODE {
 
 @export_range(0,360,1) var start_angle = 0
 @export_range(1,360,1) var end_angle = 360
-@export_range(1,3,1) var speed = 1
+@export_range(1,5,1) var speed = 1
 @export var ROUND  = false
 @export_range(24,120,8) var Length  = 64
 
@@ -36,5 +36,3 @@ func _ready():
 func _physics_process(delta):
 	if ROUND:
 		marker2D.rotate(speed*delta)
-
-

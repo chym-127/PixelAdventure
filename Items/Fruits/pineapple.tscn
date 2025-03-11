@@ -149,6 +149,6 @@ position = Vector2(0, 1)
 [node name="CollisionShape2D" parent="FoodHurt" index="0"]
 shape = SubResource("CapsuleShape2D_wb12f")
 
-[connection signal="area_entered" from="FoodHurt" to="." method="_on_food_hurt_area_entered" flags=18]
+[connection signal="area_entered" from="FoodHurt" to="." method="_on_food_hurt_area_entered"]
 
 [editable path="FoodHurt"]

@@ -34,13 +34,13 @@ layer_0/tile_data = PackedInt32Array(1310721, 0, 0, 1310722, 0, 0, 1310723, 0, 0
 [node name="Foods" type="Node2D" parent="."]
 
 [node name="Apple" parent="Foods" instance=ExtResource("7_wmkvx")]
-position = Vector2(74, 228)
+position = Vector2(66, 216)
 
 [node name="Apple2" parent="Foods" instance=ExtResource("7_wmkvx")]
-position = Vector2(74, 200)
+position = Vector2(81, 192)
 
 [node name="Apple3" parent="Foods" instance=ExtResource("7_wmkvx")]
-position = Vector2(74, 168)
+position = Vector2(435, 99)
 
 [node name="Apple4" parent="Foods" instance=ExtResource("7_wmkvx")]
 position = Vector2(152, 144)
@@ -70,10 +70,10 @@ position = Vector2(304, 177)
 position = Vector2(232, 176)
 
 [node name="FallingPlatforms" parent="." instance=ExtResource("5_sghjq")]
-position = Vector2(64, 272)
+position = Vector2(66, 253)
 
 [node name="FallingPlatforms2" parent="." instance=ExtResource("5_sghjq")]
-position = Vector2(120, 224)
+position = Vector2(136, 200)
 
 [node name="FallingPlatforms3" parent="." instance=ExtResource("5_sghjq")]
 position = Vector2(331, 94)
@@ -88,4 +88,4 @@ position = Vector2(576, 219)
 position = Vector2(264, 240)
 
 [node name="Player" parent="." instance=ExtResource("9_fkg58")]
-position = Vector2(64, 244)
+position = Vector2(65, 205)

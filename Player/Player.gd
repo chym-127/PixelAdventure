@@ -38,8 +38,9 @@ func _physics_process(delta):
 	var flag = is_on_wall_only()
 	if flag:
 		if get_wall_normal().x == -Input.get_axis("ui_left", "ui_right"):
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-			state = WALLJUMP
+			#velocity.x = move_toward(velocity.x, 0, SPEED)
+			#state = WALLJUMP
+			pass
 		else:
 			if state != DOUBLE_JUMP and state != JUMP:
 				state = FALL
