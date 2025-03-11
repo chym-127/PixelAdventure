@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bfbcqb1uehm8a"]
 
-[ext_resource type="Script" path="res://Items/Fruits/FreeEffect.gd" id="1_hpw6g"]
+[ext_resource type="Script" uid="uid://bora33g4but1h" path="res://Items/Fruits/FreeEffect.gd" id="1_hpw6g"]
 [ext_resource type="Texture2D" uid="uid://c8xih6ihbvsw5" path="res://Items/Fruits/Collected.png" id="2_85unq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ubk7h"]

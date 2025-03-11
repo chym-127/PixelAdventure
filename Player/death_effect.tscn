@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dondityaet8n"]
 
-[ext_resource type="Script" path="res://Player/DeathEffect.gd" id="1_hyq16"]
+[ext_resource type="Script" uid="uid://bg2mi4c5lpg42" path="res://Player/DeathEffect.gd" id="1_hyq16"]
 [ext_resource type="Texture2D" uid="uid://c37fn25cuw0xs" path="res://Player/Desappearing (96x96).png" id="2_sa2tm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ofqn"]

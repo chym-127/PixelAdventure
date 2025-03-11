@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://d2wy6gy2f8dxc"]
 
-[ext_resource type="Script" path="res://Traps/Saw/Saw.gd" id="1_jfshv"]
+[ext_resource type="Script" uid="uid://i7ox5euxn5rp" path="res://Traps/Saw/Saw.gd" id="1_jfshv"]
 [ext_resource type="Texture2D" uid="uid://by44mlcq6p2is" path="res://Traps/Saw/On (38x38).png" id="2_lfdkk"]
 [ext_resource type="PackedScene" uid="uid://0g8biif1c0wo" path="res://common/hit_box.tscn" id="3_irj74"]
 

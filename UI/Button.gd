@@ -24,6 +24,7 @@ func exec():
 		EVENT.PLAY:
 			SceneContext.load_level_scene(1)
 		EVENT.LEVELS:
+			SceneContext.load_levels_scene()
 			pass
 		EVENT.HELP:
 			pass

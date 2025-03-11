@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvpgcwkq57gy5"]
 
-[ext_resource type="Script" path="res://Background/DynamicBg.gd" id="1_yn4fl"]
-[ext_resource type="Shader" path="res://Background/bg-scroll.gdshader" id="2_x42fa"]
+[ext_resource type="Script" uid="uid://c0xktjkcub44b" path="res://Background/DynamicBg.gd" id="1_yn4fl"]
+[ext_resource type="Shader" uid="uid://db52n8x6hqmci" path="res://Background/bg-scroll.gdshader" id="2_x42fa"]
 [ext_resource type="Texture2D" uid="uid://ujtni874crjc" path="res://Background/Blue.png" id="3_h1shy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yog5c"]

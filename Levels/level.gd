@@ -20,4 +20,3 @@ func next_level():
 	var level_scene = load(level_string % (level_num+1))
 	get_tree().change_scene_to_packed(level_scene)  
 	
-

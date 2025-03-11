@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://40vpv7eih0ix"]
 
-[ext_resource type="Script" path="res://Items/Fruits/food.gd" id="1_53rfw"]
+[ext_resource type="Script" uid="uid://bdcv7juqwqyrs" path="res://Items/Fruits/food.gd" id="1_53rfw"]
 [ext_resource type="Texture2D" uid="uid://psd4l8jbcou1" path="res://Items/Fruits/Orange.png" id="2_wtiu3"]
 [ext_resource type="PackedScene" uid="uid://cia2c28vxxw2d" path="res://Items/Fruits/food_hurt.tscn" id="3_iyuce"]
 

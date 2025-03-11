@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://4fucxlnqw1xr"]
 
-[ext_resource type="Script" path="res://Traps/Falling Platforms/FallingPlatforms.gd" id="1_uadpw"]
+[ext_resource type="Script" uid="uid://cvmtpj0u72olx" path="res://Traps/Falling Platforms/FallingPlatforms.gd" id="1_uadpw"]
 [ext_resource type="Texture2D" uid="uid://do0p7ah4caoax" path="res://Traps/Falling Platforms/On (32x10).png" id="2_koukx"]
 [ext_resource type="PackedScene" uid="uid://p15q5ku0giw1" path="res://Traps/booster.tscn" id="3_3tyy7"]
 
@@ -57,9 +57,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vobfc"]
 _data = {
-"Idle": SubResource("Animation_sxwcg"),
-"RESET": SubResource("Animation_snntj"),
-"Run": SubResource("Animation_hro16")
+&"Idle": SubResource("Animation_sxwcg"),
+&"RESET": SubResource("Animation_snntj"),
+&"Run": SubResource("Animation_hro16")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i1ijh"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://ra3cx0navvc1"]
 
-[ext_resource type="Script" path="res://UI/menu.gd" id="1_p3d1h"]
+[ext_resource type="Script" uid="uid://p5ltotxans7j" path="res://UI/menu.gd" id="1_p3d1h"]
 [ext_resource type="PackedScene" uid="uid://dvpgcwkq57gy5" path="res://Background/dynamic_bg.tscn" id="1_wdl34"]
 [ext_resource type="Texture2D" uid="uid://4043n3brwj1a" path="res://Menu/Titlescreen/Title.png" id="2_x0juh"]
 [ext_resource type="Texture2D" uid="uid://dlhpcmlhj0o6a" path="res://Menu/Titlescreen/play.png" id="3_2v5ae"]
-[ext_resource type="Script" path="res://UI/Button.gd" id="3_4l4sn"]
+[ext_resource type="Script" uid="uid://07p1a7ap6dc" path="res://UI/Button.gd" id="3_4l4sn"]
 [ext_resource type="Texture2D" uid="uid://cl24533fufylt" path="res://Menu/Titlescreen/select.png" id="3_x20jq"]
 [ext_resource type="Texture2D" uid="uid://bhh50yjb8se3p" path="res://Menu/Titlescreen/level.png" id="4_dp1gb"]
 
@@ -33,6 +33,7 @@ texture = ExtResource("3_2v5ae")
 [node name="Button2" type="Node2D" parent="button_list"]
 position = Vector2(320, 216)
 script = ExtResource("3_4l4sn")
+event = 1
 
 [node name="Border" type="Sprite2D" parent="button_list/Button2"]
 visible = false

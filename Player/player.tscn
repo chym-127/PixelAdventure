@@ -1,8 +1,8 @@
 [gd_scene load_steps=24 format=3 uid="uid://7cnea6eco0yx"]
 
-[ext_resource type="Script" path="res://Player/Player.gd" id="1_qkkx7"]
+[ext_resource type="Script" uid="uid://mp126mh81j8g" path="res://Player/Player.gd" id="1_qkkx7"]
 [ext_resource type="Texture2D" uid="uid://dsh81uw70og16" path="res://Player/Sprites/Dude.png" id="2_oj6ru"]
-[ext_resource type="Script" path="res://Player/BornEffect.gd" id="3_wsc61"]
+[ext_resource type="Script" uid="uid://c4c2hpnil263b" path="res://Player/BornEffect.gd" id="3_wsc61"]
 [ext_resource type="Texture2D" uid="uid://bql1kexcjon03" path="res://Player/Appearing (96x96).png" id="4_kgs0k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d3qmd"]
@@ -121,13 +121,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yuldw"]
 _data = {
-"DOUBLEJUMP": SubResource("Animation_7s84r"),
-"FALL": SubResource("Animation_jnagh"),
-"IDLE": SubResource("Animation_a5d2c"),
-"JUMP": SubResource("Animation_oxtib"),
-"RESET": SubResource("Animation_e7mq4"),
-"RUN": SubResource("Animation_h87mf"),
-"WALLJUMP": SubResource("Animation_mxnaa")
+&"DOUBLEJUMP": SubResource("Animation_7s84r"),
+&"FALL": SubResource("Animation_jnagh"),
+&"IDLE": SubResource("Animation_a5d2c"),
+&"JUMP": SubResource("Animation_oxtib"),
+&"RESET": SubResource("Animation_e7mq4"),
+&"RUN": SubResource("Animation_h87mf"),
+&"WALLJUMP": SubResource("Animation_mxnaa")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j65qa"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://ft6mn52nf552"]
 
-[ext_resource type="Script" path="res://Player/BornEffect.gd" id="1_gyjgp"]
+[ext_resource type="Script" uid="uid://c4c2hpnil263b" path="res://Player/BornEffect.gd" id="1_gyjgp"]
 [ext_resource type="Texture2D" uid="uid://bql1kexcjon03" path="res://Player/Appearing (96x96).png" id="2_xf2uj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cheqm"]

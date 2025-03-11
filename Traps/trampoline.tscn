@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dj6eswfju0bog"]
 
-[ext_resource type="Script" path="res://Traps/Trampoline/Trampoline.gd" id="1_ixtww"]
+[ext_resource type="Script" uid="uid://cup1cpo4cgg8k" path="res://Traps/Trampoline/Trampoline.gd" id="1_ixtww"]
 [ext_resource type="Texture2D" uid="uid://dnkg2qwgfpo25" path="res://Traps/Trampoline/Jump (28x28).png" id="2_3g4hq"]
 [ext_resource type="PackedScene" uid="uid://p15q5ku0giw1" path="res://Traps/booster.tscn" id="3_j07ww"]
 
@@ -128,9 +128,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uei0v"]
 _data = {
-"Idle": SubResource("Animation_vc2sb"),
-"Jump": SubResource("Animation_78x2s"),
-"RESET": SubResource("Animation_rdboa")
+&"Idle": SubResource("Animation_vc2sb"),
+&"Jump": SubResource("Animation_78x2s"),
+&"RESET": SubResource("Animation_rdboa")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jx6cd"]

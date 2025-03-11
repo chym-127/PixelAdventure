@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://l37g8iu4uxoo"]
 
-[ext_resource type="Script" path="res://Traps/Arrow/Arrow.gd" id="1_2cwtu"]
+[ext_resource type="Script" uid="uid://dkngvl82bu5d" path="res://Traps/Arrow/Arrow.gd" id="1_2cwtu"]
 [ext_resource type="Texture2D" uid="uid://demmv75xpiqqb" path="res://Traps/Arrow/Arrow.png" id="2_ftxmb"]
 [ext_resource type="PackedScene" uid="uid://p15q5ku0giw1" path="res://Traps/booster.tscn" id="3_h1inh"]
 
@@ -53,9 +53,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fbtn4"]
 _data = {
-"Death": SubResource("Animation_hk07p"),
-"Idle": SubResource("Animation_2dglo"),
-"RESET": SubResource("Animation_t6cho")
+&"Death": SubResource("Animation_hk07p"),
+&"Idle": SubResource("Animation_2dglo"),
+&"RESET": SubResource("Animation_t6cho")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_beqp0"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://j2b8r0skcak5"]
+
+[ext_resource type="PackedScene" uid="uid://dvpgcwkq57gy5" path="res://Background/dynamic_bg.tscn" id="1_30sk2"]
+[ext_resource type="Script" uid="uid://cue514duqcj6" path="res://UI/select_level.gd" id="1_jqcm2"]
+[ext_resource type="Script" uid="uid://bp5e347qmfu2u" path="res://UI/levels-wrap.gd" id="2_jqcm2"]
+
+[node name="SelectLevel" type="Node2D"]
+script = ExtResource("1_jqcm2")
+
+[node name="DynamicBg" parent="." instance=ExtResource("1_30sk2")]
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+offset_top = 35.0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 10
+script = ExtResource("2_jqcm2")
