@@ -1,8 +1,8 @@
 extends GridContainer
 
 
-var cols:int = 5
-var rows:int = 10
+var cols:int = 2
+var rows:int = 5
 
 var cur:Vector2 = Vector2(0,0)
 var cur_button:Button
@@ -11,8 +11,9 @@ var key_includes = ["Down","Up","Left","Right"]
 
 
 func _ready() -> void:
+	columns = rows
 	var level_btn_scene = load("res://UI/level-btn.tscn")
-	for i in range(50):
+	for i in range(cols*rows):
 		var button = level_btn_scene.instantiate()
 		button.set_idx(i+1)
 		buttonList.push_back(button)

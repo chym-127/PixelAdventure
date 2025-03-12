@@ -58,7 +58,8 @@ func _physics_process(delta):
 			can_jump = false
 			can_double_jump = false
 			state = DOUBLE_JUMP
-			jump(JUMP_VELOCITY * 0.85)
+			#jump(JUMP_VELOCITY * 0.85)
+			jump(JUMP_VELOCITY * 0.9)
 		else:
 			can_double_jump = true
 			state = JUMP
